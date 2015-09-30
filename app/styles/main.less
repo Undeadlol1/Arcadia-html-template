@@ -1,0 +1,586 @@
+@import "../bower_components/bootstrap/less/bootstrap.less";
+@icon-font-path: "../fonts/glyphicons/";
+@import "../bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css";
+@media (min-width: 1px) {
+    .navbar {
+        position: absolute;
+        min-height: 0;
+        border: none;
+    }
+    .navbar-default .navbar-toggle {
+        display: block;
+        float: left;
+        background-color: transparent;
+        border-color: transparent;
+        &:hover {
+            background-color: darkgrey;
+        }
+    }
+    .navbar-default {
+        border-color: transparent;
+        background-color: transparent;
+    }
+}
+
+
+/* font-family: "ProximaNovaRegular"; */
+
+@font-face {
+    font-family: "ProximaNovaRegular";
+    src: url("../fonts/ProximaNovaRegular/ProximaNovaRegular.eot");
+    src: url("../fonts/ProximaNovaRegular/ProximaNovaRegular.eot?#iefix")format("embedded-opentype"), url("../fonts/ProximaNovaRegular/ProximaNovaRegular.woff") format("woff"), url("../fonts/ProximaNovaRegular/ProximaNovaRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+/* font-family: "ProximaNovaBold"; */
+
+@font-face {
+    font-family: "ProximaNovaBold";
+    src: url("../fonts/ProximaNovaBold/ProximaNovaBold.eot");
+    src: url("../fonts/ProximaNovaBold/ProximaNovaBold.eot?#iefix")format("embedded-opentype"), url("../fonts/ProximaNovaBold/ProximaNovaBold.woff") format("woff"), url("../fonts/ProximaNovaBold/ProximaNovaBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+/* font-family: "ProximaNovaBlack"; */
+
+@font-face {
+    font-family: "ProximaNovaBlack";
+    src: url("../fonts/ProximaNovaBlack/ProximaNovaBlack.eot");
+    src: url("../fonts/ProximaNovaBlack/ProximaNovaBlack.eot?#iefix")format("embedded-opentype"), url("../fonts/ProximaNovaBlack/ProximaNovaBlack.woff") format("woff"), url("../fonts/ProximaNovaBlack/ProximaNovaBlack.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+/* primary styles */
+
+@brand-primary: #c59a6d;
+body {
+    font: 22px ProximaNovaRegular;
+    color: #424a51;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 47px;
+}
+
+h1 {
+    font: 60px ProximaNovaBold;
+    color: white;
+    border: 2px solid white;
+    border-radius: 3px;
+}
+
+h2 {
+    font: 30px ProximaNovaBold;
+    text-transform: uppercase;
+    margin: 126px auto 53px;
+}
+
+h3 {
+    font: 22px ProximaNovaBold;
+    text-transform: uppercase;
+}
+
+h4 {}
+
+.btn {
+    background-color: transparent;
+    border-color: @brand-primary;
+    border-radius: 1px;
+    margin-bottom: 104px;
+    i {
+        color: @brand-primary;
+    }
+    &:hover {
+        background-color: #776551;
+        i {
+            color: white;
+        }
+    }
+}
+
+.btn-primary {
+    background-color: @brand-primary;
+}
+
+hr {
+    max-width: 60px;
+    height: 2px;
+    background-color: @brand-primary;
+    margin: 53px auto;
+    border: none;
+}
+
+
+/* SECTION STYLES */
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+.navmenu-default,
+.navbar-default .navbar-offcanvas {
+    background-color: white;
+    li:hover {
+        background-color: lightgrey;
+    }
+}
+
+.jumbotron {
+    background: url('../images/bg.jpg');
+    background-position: top left;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    i {
+        text-align: left;
+        display: inherit;
+    }
+    .btn {
+        margin-top: 30px;
+        i {
+            color: white;
+        }
+        &:hover {
+            i {
+                color: darkgrey;
+            }
+        }
+    }
+}
+
+#video {
+    .col-md-12 {
+        padding: 0;
+    }
+}
+
+#services {
+    .panel {
+        transition: transform 1s;
+        h3,
+        p,
+        i {
+            color: #424a51;
+        }
+        h3 {
+            font-size: 20px;
+            margin: 40px auto;
+        }
+        i {
+            font-size: 50px;
+        }
+        p {
+            font: 18px ProximaNovaRegular;
+            margin-bottom: 0px;
+            line-height: 1.7;
+        }
+        &:hover {
+            transform: scale(1.05, 1.12);
+            border-color: @brand-primary;
+            h3 {
+                color: @brand-primary;
+            }
+            p,
+            i {
+                color: black;
+            }
+            p {
+                font-weight: bold;
+            }
+        }
+        .panel-body {
+            padding: 100px 15px
+        }
+    }
+    p {
+        margin-bottom: 175px;
+    }
+    .btn {
+        margin-top: 165px;
+    }
+}
+
+#shop {
+    // height: 200px;
+    .col-md-12 {
+        color: white;
+        background-color: #282f35;
+        a {
+            margin: 76px auto;
+            font: 14px ProximaNovaBold;
+            border-color: #776551;
+            border-radius: 0;
+            padding: 20px 70px;
+        }
+    }
+}
+
+#projects {
+    .images {
+        position: relative;
+        width: 50%;
+        float: left;
+        padding: 0;
+        margin: 0;
+        z-index: 1;
+        //background-clip: content-box;
+        background-color: black;
+        img {
+            opacity: 1;
+            transition: opacity 0.7s ease-out;
+        }
+        .images-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            hr {
+                background-color: white;
+                height: 2px;
+                max-width: 32px;
+                margin-top: 23px;
+                margin-bottom: 0;
+                opacity: 0;
+            }
+        }
+        h3,
+        h4 {
+            z-index: 2;
+            padding: 0;
+            margin: 0;
+            font-size: 19px;
+        }
+        h3 {
+            color: white;
+            margin-bottom: 14px;
+        }
+        h4 {
+            color: @brand-primary;
+            font: 28px ProximaNovaRegular;
+        }
+        img {
+            width: 100%;
+        }
+        .btn {
+            display: block;
+        }
+    }
+    .images:hover {
+        img {
+            opacity: 0.6;
+        }
+        hr {
+            opacity: 1;
+            z-index: 5;
+        }
+        .images-text {
+            opacity: 1;
+            z-index: 5;
+        }
+    }
+    .images-row {
+        .make-row();
+    }
+    .behance {
+        margin-top: 114px;
+        margin-bottom: 67px;
+    }
+}
+
+#partners {
+    h2 {
+        color: #ffffff;
+    }
+    background-image: url('../images/notebook.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    .logos {
+        margin-bottom: 170px;
+        .logo {
+            height: 51px;
+            margin-bottom: 20px;
+            img {
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                left: 50%;
+            }
+        }
+    }
+}
+
+#about {
+    .panel,
+    .panel-warning {
+        min-height: 400px;
+        border-radius: 0;
+        padding: 0;
+        opacity: 0.6;
+        &:hover {
+            opacity: 1;
+        }
+        .panel-body {
+            padding: 0 15px;
+        }
+        img {
+            margin: 75px auto 45px;
+            display: block;
+        }
+        b,
+        span {
+            display: block;
+        }
+        b {
+            font: 20px ProximaNovaBold;
+            margin-bottom: 30px;
+        }
+        span {
+            font: 16px ProximaNovaRegular;
+        }
+        hr {
+            min-width: 104px;
+            margin-top: 28px; //auto 80px;
+        }
+    }
+    .panel-warning {
+        //orange panel styles
+        border-color: @brand-primary;
+        h3 {
+            margin: 110px auto 70px;
+            font: 20px ProximaNovaBold;
+            color: @brand-primary;
+        }
+        img {
+            margin: 0 auto;
+        }
+    }
+    .btn {
+        margin-top: 104px;
+    }
+}
+
+#tweets {
+    background-image: url('../images/macbook.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    h2,
+    p,
+    span {
+        color: white;
+    }
+    p {
+        font-style: italic;
+        margin-bottom: 53px;
+    }
+    span {
+        text-transform: uppercase;
+        margin-bottom: 135px;
+        display: block;
+    }
+    #carousel {
+        .carousel-indicators {
+            li {
+                border-color: @brand-primary;
+                border-radius: 0;
+            }
+            .active {
+                background-color: @brand-primary;
+            }
+        }
+    }
+}
+
+#form,
+footer {
+    background-color: #282f35;
+    color: white;
+}
+
+#form {
+    hr {
+        margin-bottom: 130px;
+    }
+    form {
+        input,
+        textarea {
+            background-color: #1e2429;
+            border: none;
+            border-radius: 0;
+            outline: none;
+            padding: 16px 22px;
+            height: auto; //fixing strange bug
+            margin-bottom: 50px;
+            font: 16px ProximaNovaRegular;
+            color: white;
+            font-style: italic;
+            &:focus {
+                border-top: 3px solid #a4825f;
+            }
+        }
+        input:nth-of-type(even) {
+            margin-right: 12px;
+        }
+        .form-control {
+            box-shadow: none;
+        }
+    }
+    .btn {
+        padding: 15px 67px;
+        margin-top: 30px;
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+    font: 18px ProximaNovaRegular;
+    strong {
+        font: 18px ProximaNovaBold;
+        display: block;
+        text-align: left;
+        i {
+            font-size: 24px;
+        }
+    }
+    i {
+        color: @brand-primary;
+        padding-right: 25px;
+    }
+    ul {
+        margin-top: 20px;
+        display: block;
+    }
+    .social {
+        li {
+            list-style: none;
+            float: left;
+            a {
+                i {
+                    color: white;
+                    margin-right: 43px;
+                    padding: 0;
+                }
+                &:hover {
+                    i {
+                        color: @brand-primary;
+                    }
+                }
+            }
+        }
+    }
+    .address {
+        li {
+            color: white;
+            text-align: left;
+            list-style: none;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+footer {
+    text-transform: uppercase;
+    border-bottom: 3px solid @brand-primary;
+    padding-top: 165px;
+    padding-bottom: 40px;
+    p {
+        font: 16px ProximaNovaRegular;
+        margin-bottom: 0;
+    }
+    span {
+        color: #c59a6d;
+    }
+    .btn {
+        float: right;
+        font: 16px ProximaNovaRegular;
+        margin-bottom: 0;
+        color: white;
+        border: none;
+        //fix for bad line aligpent with <p>
+        transform: translateY(-9px);
+        i {
+            font-size: 20px;
+        }
+    }
+}
+
+// DIFFERENT SCREEN RESOLUTION STYLES
+//@grid-float-breakpoint: @screen-desktop; // navigation collapsing fix
+@screen-xs-max: 600px;
+@screen-sm-min: 600px;
+@media (max-width: @screen-xs-max) {
+    .jumbotron {
+        h1 {
+            padding: 0;
+        }
+    }
+    #services {
+        p {
+            margin-bottom: 100px;
+        }
+    }
+    #services .btn,
+    #about {
+        .col-xs-6:nth-of-type(odd) {
+            padding-right: 0;
+        }
+        .btn {
+            margin-top: 100px;
+        }
+    }
+}
+
+@media (min-width: @screen-sm-min) {
+    .jumbotron {
+        h1 {
+            padding: 50px 130px;
+        }
+    }
+    #services {
+        p {
+            margin-bottom: 100px;
+        }
+    }
+    #services .btn,
+    #about .btn {
+        margin-top: 100px;
+    }
+    #projects {
+        .images {
+            width: 33%;
+        }
+    }
+}
+
+
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: @screen-md-min) {
+    #projects {
+        .images {
+            width: 20%;
+        }
+    }
+}
+
+
+/* Large devices (large desktops, 1200px and up) */
+
+@media (min-width: @screen-lg-min) {
+    #video {
+        height: 870px;
+        margin-top: -120px;
+        .col-md-12 {
+            position: absolute;
+            clip: rect(190px, auto, 850px, auto);
+            padding: 0;
+        }
+    }
+}
