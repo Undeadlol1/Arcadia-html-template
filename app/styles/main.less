@@ -1,27 +1,6 @@
 @import "../bower_components/bootstrap/less/bootstrap.less";
 @icon-font-path: "../fonts/glyphicons/";
 @import "../bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css";
-@media (min-width: 1px) {
-    .navbar {
-        position: absolute;
-        min-height: 0;
-        border: none;
-    }
-    .navbar-default .navbar-toggle {
-        display: block;
-        float: left;
-        background-color: transparent;
-        border-color: transparent;
-        &:hover {
-            background-color: darkgrey;
-        }
-    }
-    .navbar-default {
-        border-color: transparent;
-        background-color: transparent;
-    }
-}
-
 
 /* font-family: "ProximaNovaRegular"; */
 
@@ -87,8 +66,6 @@ h3 {
     text-transform: uppercase;
 }
 
-h4 {}
-
 .btn {
     background-color: transparent;
     border-color: @brand-primary;
@@ -120,15 +97,16 @@ hr {
 
 /* SECTION STYLES */
 
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: white;
-}
-
-.navmenu-default,
-.navbar-default .navbar-offcanvas {
-    background-color: white;
-    li:hover {
-        background-color: lightgrey;
+nav {
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: white;
+    }
+    .navmenu-default,
+    .navbar-default .navbar-offcanvas {
+        background-color: white;
+        li:hover {
+            background-color: lightgrey;
+        }
     }
 }
 
@@ -157,7 +135,7 @@ hr {
 
 #video {
     .col-md-12 {
-        padding: 0;
+        padding: 0; //to make sure it's full width
     }
 }
 
@@ -208,7 +186,6 @@ hr {
 }
 
 #shop {
-    // height: 200px;
     .col-md-12 {
         color: white;
         background-color: #282f35;
@@ -230,7 +207,6 @@ hr {
         padding: 0;
         margin: 0;
         z-index: 1;
-        //background-clip: content-box;
         background-color: black;
         img {
             opacity: 1;
@@ -512,13 +488,38 @@ footer {
 }
 
 // DIFFERENT SCREEN RESOLUTION STYLES
-//@grid-float-breakpoint: @screen-desktop; // navigation collapsing fix
+//custom resolution variables
 @screen-xs-max: 600px;
-@screen-sm-min: 600px;
+@screen-sm-min: 601px;
+//fix for strange collapsing bug on super small devices
+@media (min-width: 1px) {
+    .navbar {
+        position: absolute;
+        min-height: 0;
+        border: none;
+    }
+    .navbar-default .navbar-toggle {
+        display: block;
+        float: left;
+        background-color: transparent;
+        border-color: transparent;
+        &:hover {
+            background-color: darkgrey;
+        }
+    }
+    .navbar-default {
+        border-color: transparent;
+        background-color: transparent;
+    }
+}
+
 @media (max-width: @screen-xs-max) {
     .jumbotron {
         h1 {
             padding: 0;
+        }
+        h2 {
+            margin-top: 90px;
         }
     }
     #services {
