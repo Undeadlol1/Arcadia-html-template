@@ -6842,35 +6842,64 @@ hr {
   border: none;
 }
 /* SECTION STYLES */
-nav .navbar-default .navbar-toggle .icon-bar {
+@media (min-width: 1px) {
+  .navbar {
+    position: absolute;
+    min-height: 0;
+    border: none;
+  }
+  .navbar-default .navbar-toggle {
+    display: block;
+    float: left;
+    border-color: transparent;
+  }
+  .navbar-default .navbar-toggle:hover {
+    background-color: darkgrey;
+  }
+  .navbar-default {
+    border-color: transparent;
+    background-color: transparent;
+  }
+}
+#myNavmenu {
   background-color: white;
 }
-nav .navmenu-default,
-nav .navbar-default .navbar-offcanvas {
+#myNavmenu a {
+  color: #424A51;
+  font: 20px ProximaNovaBold;
+}
+#myNavmenu a:hover {
+  color: #000000;
+}
+#myNavmenu .navbar-default .navbar-toggle .icon-bar {
   background-color: white;
 }
-nav .navmenu-default li:hover,
-nav .navbar-default .navbar-offcanvas li:hover {
+#myNavmenu .navmenu-default,
+#myNavmenu .navbar-default .navbar-offcanvas {
+  background-color: white;
+}
+#myNavmenu .navmenu-default li:hover,
+#myNavmenu .navbar-default .navbar-offcanvas li:hover {
   background-color: lightgrey;
 }
-#jumbotron.jumbotron {
+.jumbotron {
   background: url('../images/bg.jpg');
   background-position: top left;
   background-size: cover;
   background-attachment: fixed;
   color: white;
 }
-#jumbotron.jumbotron i {
+.jumbotron i {
   text-align: left;
   display: inherit;
 }
-#jumbotron.jumbotron .btn {
+.jumbotron .btn {
   margin-top: 30px;
 }
-#jumbotron.jumbotron .btn i {
+.jumbotron .btn i {
   color: white;
 }
-#jumbotron.jumbotron .btn:hover i {
+.jumbotron .btn:hover i {
   color: darkgrey;
 }
 #video .col-md-12 {
@@ -7198,26 +7227,6 @@ footer .btn {
 }
 footer .btn i {
   font-size: 20px;
-}
-@media (min-width: 1px) {
-  .navbar {
-    position: absolute;
-    min-height: 0;
-    border: none;
-  }
-  .navbar-default .navbar-toggle {
-    display: block;
-    float: left;
-    background-color: transparent;
-    border-color: transparent;
-  }
-  .navbar-default .navbar-toggle:hover {
-    background-color: darkgrey;
-  }
-  .navbar-default {
-    border-color: transparent;
-    background-color: transparent;
-  }
 }
 @media (max-width: 600px) {
   .jumbotron h1 {
